@@ -5,5 +5,12 @@ module.exports = {
   testEnvironment: 'node',
   transform: {
     '.+\\.ts$': 'ts-jest'
+  },
+  globals: {
+    'ts-test': {
+      diagnostic: {
+        ignoreCodes: false
+      }
+    }
   }
 }
