@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/key-spacing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/consistent-type-imports': 'off'
+    '@typescript-eslint/consistent-type-imports': 'off',
+    '@typescript-eslint/method-signature-style': 'off'
   }
 }
