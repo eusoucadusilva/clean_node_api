@@ -21,10 +21,8 @@ export class SignUpController implements Controller {
       }
       const { name, email, password, passwordConfirmation } = httpRequest.body
       if (password !== passwordConfirmation) {
-        console.log('antes do return!')
         return badRequest(new InvalidParamError('passwordConfirmation'))
       }
-      console.log('depois do return!')
       const isValid = this.emailValidator.isValid(email)
       if (!isValid) {
         return badRequest(new InvalidParamError('email'))
@@ -36,6 +34,7 @@ export class SignUpController implements Controller {
       })
       return ok(account)
     } catch (error) {
+      console.error(error)
       return serverError()
     }
   }
